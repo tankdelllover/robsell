@@ -1,0 +1,379 @@
+.page{
+    min-height:100vh;
+    background:#eef5fb;
+    padding:40px;
+    color:#0b2540;
+}
+
+.team-header{
+    padding:35px;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    gap:30px;
+    margin-bottom:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.team-logo{
+    width:110px;
+    height:110px;
+    object-fit:contain;
+    background:white;
+    border-radius:50%;
+    padding:10px;
+}
+
+.team-header h1{
+    margin:0;
+    font-size:52px;
+}
+
+.team-header h2{
+    margin:8px 0;
+    font-size:28px;
+    opacity:.9;
+}
+
+.team-header p{
+    margin:0;
+    font-size:20px;
+}
+
+.table-container{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.table-container h2{
+    margin-top:0;
+    margin-bottom:25px;
+    font-size:34px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+td{
+    padding:14px;
+    border-bottom:1px solid #e3e7ec;
+}
+
+td:first-child{
+    font-weight:600;
+}
+
+td:nth-child(2){
+    text-align:center;
+}
+
+td:last-child{
+    text-align:right;
+    font-weight:700;
+    color:#1d6fd8;
+}
+
+tr:hover{
+    background:#f5f9fd;
+}
+
+@media(max-width:900px){
+
+.team-header{
+    flex-direction:column;
+    text-align:center;
+}
+
+.team-logo{
+    width:90px;
+    height:90px;
+}
+
+.team-header h1{
+    font-size:40px;
+}
+
+.table-container{
+    overflow-x:auto;
+}
+
+}
+.team-hero{
+
+padding:50px;
+border-radius:25px;
+text-align:center;
+margin-bottom:45px;
+box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+}
+
+.hero-logo{
+
+width:140px;
+margin-bottom:20px;
+
+}
+
+.team-hero h1{
+
+font-size:56px;
+margin:0;
+
+}
+
+.team-hero h2{
+
+margin:10px 0;
+font-size:28px;
+opacity:.9;
+
+}
+
+.team-hero p{
+
+font-size:22px;
+
+}
+
+.overall-rank{
+
+margin-top:25px;
+font-size:24px;
+font-weight:bold;
+
+}
+
+.stat-grid {
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-bottom:50px;
+
+}
+
+
+.stat-card {
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    text-align:center;
+
+    border-top:8px solid;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.12);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.stat-card:hover {
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.18);
+
+}
+
+
+.stat-card h3 {
+
+    font-size:18px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    color:#555;
+
+    margin-bottom:15px;
+
+}
+
+
+.stat-card strong {
+
+    display:block;
+
+    font-size:42px;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+
+}
+
+
+.stat-card p {
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    margin:0;
+
+}
+.logo-container {
+
+    width: 170px;
+    height: 170px;
+    margin: 0 auto 25px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+
+}
+
+
+.hero-logo {
+
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+
+}
+
+.metric-section {
+
+    margin-top:50px;
+
+}
+
+
+.metric-section h2 {
+
+    font-size:32px;
+    margin-bottom:25px;
+
+}
+
+
+.metric-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+
+.metric-card {
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.12);
+
+}
+
+
+.metric-card h3 {
+
+    font-size:16px;
+    text-transform:uppercase;
+
+    color:#666;
+
+}
+
+
+.metric-card strong {
+
+    display:block;
+
+    font-size:36px;
+
+    margin:15px 0;
+
+}
+
+
+.metric-card p {
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+.percent-container {
+
+    margin-top:20px;
+
+}
+
+
+.percent-label {
+
+    display:flex;
+    justify-content:space-between;
+
+    font-size:14px;
+
+    margin-bottom:8px;
+
+}
+
+
+.percent-track {
+
+    width: 100%;
+    
+    height:10px;
+
+    background:#e5e7e5;
+
+    border-radius:8px;
+
+    overflow: hidden;
+
+}
+
+
+.percent-fill {
+
+    height:100%;
+
+    border-radius:8px;
+
+    transition: width 0.4s ease;
+
+}
+
+
+.percent-container p {
+
+    margin-top:8px;
+
+    font-size:13px;
+
+    color:#666;
+
+}

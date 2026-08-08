@@ -1,0 +1,176 @@
+body{
+    margin:0;
+    font-family:Inter, Arial, Helvetica, sans-serif;
+    background:#eef8fd;
+    color:#002244;
+}
+
+/* ---------- Top Banner ---------- */
+
+.topbar{
+    background:#55C3F3;
+    color:white;
+    padding:30px 50px;
+    box-shadow:0 4px 15px rgba(0,0,0,.18);
+}
+
+.logo{
+    font-size:54px;
+    font-weight:800;
+    margin:0;
+}
+
+.tagline{
+    margin-top:10px;
+    font-size:20px;
+    opacity:.95;
+}
+
+/* ---------- Navigation ---------- */
+
+.navbar{
+    display:flex;
+    gap:35px;
+    margin-top:25px;
+    font-weight:600;
+}
+
+.navbar span{
+    cursor:pointer;
+    transition:.2s;
+}
+
+.navbar span:hover{
+    color:#002244;
+}
+
+/* ---------- Page ---------- */
+
+.page{
+    padding:35px;
+    max-width:1700px;
+    margin:auto;
+}
+
+/* ---------- Dashboard Cards ---------- */
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.card{
+    background:white;
+    border-radius:14px;
+    padding:22px;
+    box-shadow:0 6px 18px rgba(0,34,68,.12);
+}
+
+.card-title{
+    color:#4b92db;
+    font-size:15px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.card-value{
+    font-size:32px;
+    font-weight:800;
+    color:#002244;
+}
+
+.card-sub{
+    margin-top:6px;
+    color:#587fa4;
+}
+
+/* ---------- Table ---------- */
+
+.table-container{
+    background:white;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,34,68,.18);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead th{
+    background:#55C3F3;
+    color:white;
+    padding:15px;
+    font-size:16px;
+    cursor:pointer;
+    position:sticky;
+    top:0;
+    transition:.2s;
+}
+
+thead th:hover{
+    background:#002244;
+}
+
+tbody td{
+    padding:13px;
+    text-align:center;
+    border-bottom:1px solid #d6e6f2;
+}
+
+tbody tr:nth-child(even){
+    background:#f8fcff;
+}
+
+tbody tr:hover{
+    background:#d9f2ff;
+}
+
+.team-name{
+    font-weight:700;
+    text-align:left;
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:1200px){
+
+.dashboard{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:900px){
+
+.page{
+    padding:15px;
+}
+
+.logo{
+    font-size:36px;
+}
+
+.dashboard{
+    grid-template-columns:1fr;
+}
+
+table{
+    font-size:14px;
+}
+
+}
+
+.team-link{
+  color:#002244;
+  text-decoration:none;
+  font-weight:700;
+}
+
+.team-link:hover{
+  color:#4fa8e8;
+  text-decoration:underline;
+}

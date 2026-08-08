@@ -1,0 +1,229 @@
+.compare-page {
+    color: #102a43;
+}
+
+.compare-page h1,
+.compare-page h2,
+.compare-page h3,
+.compare-page p,
+.compare-page strong,
+.compare-page label {
+    color: #102a43;
+}
+
+.compare-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+}
+
+.compare-page h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* TEAM SELECTORS */
+
+.compare-selectors {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 35px;
+}
+
+.compare-selectors select {
+    width: 220px;
+    padding: 10px 14px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+
+/* TEAM HEADER */
+
+.teams-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 70px minmax(0, 1fr);
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto 50px;
+}
+
+
+/* TEAM CARDS */
+
+.team-compare-card {
+    background: white;
+    border-top: 5px solid;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    min-height: 180px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* FORCE LOGO SIZE */
+
+.team-compare-card img {
+    width: 80px !important;
+    height: 80px !important;
+    max-width: 80px !important;
+    max-height: 80px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto 12px auto !important;
+}
+
+.team-compare-card h2 {
+    margin: 5px 0;
+}
+
+.team-compare-card h3 {
+    margin: 4px 0 10px;
+    color: #102a43
+    opacity: 0.7;
+}
+
+.team-compare-card p {
+    margin: 0;
+}
+
+
+/* VS */
+
+.compare-vs {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+
+/* COMPARISON SECTION */
+
+.comparison-section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.comparison-section > h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* COMPARISON METRIC */
+
+.compare-metric {
+    background: white;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.compare-metric h3 {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+
+/* METRIC BARS */
+
+.metric-bars {
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+    align-items: center;
+    gap: 12px;
+}
+
+.metric-side {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.metric-side.left {
+    flex-direction: row;
+}
+
+.metric-side.right {
+    flex-direction: row;
+}
+
+.metric-side strong {
+    min-width: 60px;
+    font-size: 18px;
+}
+
+.metric-side.right strong {
+    text-align: right;
+}
+
+.track {
+    flex: 1;
+    height: 12px;
+    background: #e9edf2;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    border-radius: 20px;
+}
+
+.metric-vs {
+    text-align: center;
+    font-weight: 700;
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+.winner {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 16px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .teams-header {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .compare-vs {
+        order: 2;
+    }
+
+    .team-compare-card {
+        width: 100%;
+    }
+
+    .compare-selectors {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .compare-selectors select {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .metric-bars {
+        grid-template-columns: 1fr;
+    }
+
+    .metric-vs {
+        display: none;
+    }
+
+}

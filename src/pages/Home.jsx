@@ -60,6 +60,18 @@ function Home() {
     return Number(value).toFixed(3);
   }
 
+    const bestOffense = [...teams].sort(
+    (a, b) => a.offense - b.offense
+  )[0];
+
+  const bestDefense = [...teams].sort(
+    (a, b) => a.defense - b.defense
+  )[0];
+
+  const hardestSchedule = [...teams].sort(
+    (a, b) => a.sos_rank - b.sos_rank
+  )[0];
+
   const columns = [
     ["rank", "Rank"],
     ["team", "Team"],
@@ -120,7 +132,7 @@ function Home() {
             <div className="card-title">Best Offense</div>
 
             <div className="card-value">
-              Notre Dame
+              {bestOffense ? bestOffense.team : "-"}
             </div>
 
             <div className="card-sub">
@@ -132,7 +144,7 @@ function Home() {
             <div className="card-title">Best Defense</div>
 
             <div className="card-value">
-              Texas Tech
+              {bestDefense ? bestDefense.team : "-"}
             </div>
 
             <div className="card-sub">
@@ -144,7 +156,7 @@ function Home() {
             <div className="card-title">Hardest Schedule</div>
 
             <div className="card-value">
-              UCLA
+              {hardestSchedule ? hardestSchedule.team : "-"}
             </div>
 
             <div className="card-sub">

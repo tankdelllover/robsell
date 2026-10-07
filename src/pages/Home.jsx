@@ -61,16 +61,16 @@ function Home() {
   }
 
     const bestOffense = [...teams].sort(
-    (a, b) => a.offense - b.offense
-  )[0];
+  (a, b) => a.offense_rank - b.offense_rank
+)[0];
 
-  const bestDefense = [...teams].sort(
-    (a, b) => a.defense - b.defense
-  )[0];
+const bestDefense = [...teams].sort(
+  (a, b) => a.defense_rank - b.defense_rank
+)[0];
 
-  const hardestSchedule = [...teams].sort(
-    (a, b) => a.sos_rank - b.sos_rank
-  )[0];
+const hardestSchedule = [...teams].sort(
+  (a, b) => a.sos_rank - b.sos_rank
+)[0];
 
   const columns = [
     ["rank", "Rank"],

@@ -7,6 +7,8 @@ export default function Compare() {
     const [teams, setTeams] = useState([]);
     const [branding, setBranding] = useState([]);
 
+    const { year } = useYear();
+
     const [teamOne, setTeamOne] = useState(null);
     const [teamTwo, setTeamTwo] = useState(null);
 

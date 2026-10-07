@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Compare.css";
+import { useYear } from "../context/YearContext";
 
 export default function Compare() {
 
@@ -12,7 +13,7 @@ export default function Compare() {
     useEffect(() => {
 
         Promise.all([
-            fetch("/data/teams.json").then(r => r.json()),
+          fetch(`/data/${year}/teams.json`).then(r => r.json()),
             fetch("/data/branding/team_branding.json").then(r => r.json())
         ]).then(([teamData, brandData]) => {
 
@@ -24,7 +25,7 @@ export default function Compare() {
 
         });
 
-    }, []);
+   }, [year]);
 
     if (!teamOne || !teamTwo) {
         return <h2>Loading...</h2>;

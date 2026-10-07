@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useYear } from "../context/YearContext";
 
 import TeamHero from "../components/TeamHero";
 import StatCards from "../components/StatCards";
@@ -11,8 +12,9 @@ import "./Team.css";
 function Team() {
 
     const { teamName } = useParams();
+const { year } = useYear();
 
-    const [team, setTeam] = useState(null);
+const [team, setTeam] = useState(null);
     const [branding, setBranding] = useState({});
 
 
@@ -20,7 +22,7 @@ function Team() {
 
         Promise.all([
 
-            fetch("/data/teams.json")
+            fetch(`/data/${year}/teams.json`)
                 .then(res => res.json()),
 
             fetch("/data/branding/team_branding.json")
@@ -51,7 +53,7 @@ function Team() {
         });
 
 
-    }, [teamName]);
+    }, [teamName, year]);
 
 
 

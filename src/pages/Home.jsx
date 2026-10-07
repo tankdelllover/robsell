@@ -2,19 +2,22 @@ import { useEffect, useState } from "react";
 import "../App.css";
 import RankingsTable from "../components/RankingsTable";
 import { Link } from "react-router-dom";
+import SeasonSelector from "../components/SeasonSelector";
+import { useYear } from "../context/YearContext";
 
 function Home() {
   const [teams, setTeams] = useState([]);
   const [sortColumn, setSortColumn] = useState("rank");
   const [ascending, setAscending] = useState(true);
+  const { year } = useYear();
 
   useEffect(() => {
-    fetch("/data/rankings.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setTeams(data);
-      });
-  }, []);
+  fetch(`/data/${year}/rankings.json`)
+    .then((res) => res.json())
+    .then((data) => {
+      setTeams(data);
+    });
+}, [year]);
 
   function sortTeams(column) {
     const newAscending =
@@ -78,6 +81,16 @@ function Home() {
           Data-driven rankings built from efficiency,
           red zone performance, HAVOC, and strength of schedule.
         </div>
+
+        <div
+  style={{
+    marginTop: "20px",
+    display: "flex",
+    justifyContent: "center"
+  }}
+>
+  <SeasonSelector />
+</div>
 
         <div className="navbar">
           <span>🏆 Rankings</span>
